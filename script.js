@@ -6,6 +6,9 @@ const toggle = player.querySelector('.toggle'); //done
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
 
+
+video.muted();
+video.play();
 video.addEventListener('timeupdate', () => {
   const percent = (video.currentTime / video.duration) * 100;
   progressBar.style.width = `${percent}%`;
